@@ -26,6 +26,7 @@ public class Programa {
 
             ArrayList<Double> melhorCombinacao = calculaVariosResistores(resistores, valorDesejadoResistor);
             resultado = calculaResParalelo(melhorCombinacao);
+
             texto.append("Melhor combinação de resitores: \n");
             texto.append("Valor do resistor desejado: ").append(valorDesejadoResistor).append("\n");
             texto.append("Valor da melhor Combinação: ").append(resultado).append("\n");

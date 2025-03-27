@@ -30,11 +30,11 @@ public class Utilitaria {
     }
 
     public static double calculaResParalelo(ArrayList<Double> resistores) {
-        double resistorEquivalente = resistores.get(0);
-        for (int i = 0 ; i < resistores.size()-1 ; i++) {
-            resistorEquivalente = (resistorEquivalente * resistores.get(i+1))/(resistorEquivalente + resistores.get(i+1));
+        double somaInversos = 0;
+        for (double r : resistores) {
+            somaInversos += 1.0 / r;
         }
-        return resistorEquivalente;
+        return 1.0 / somaInversos;
     }
 
     public static ArrayList<Double> calculaVariosResistores(ArrayList<Double> resistores, Double resistorDesejado) {
@@ -122,7 +122,6 @@ public class Utilitaria {
                         }
                     }
                 }
-
             }
         }
         return melhorCombinacao;
